@@ -8,8 +8,6 @@ export const CartItem = (props) => {
     const {prod}=props;
     const dispatch=useDispatch();
 
-    console.log(prod);
-
     const isMdDevice = useMediaQuery('(max-width: 1000px)');
 
     const handleAddQuantity=()=>{
@@ -18,7 +16,6 @@ export const CartItem = (props) => {
         }));
     }
     const handleReduceQuantity=()=>{
-        console.log(prod.id);
         if(prod.quantity-1===0)
             dispatch(cartActions.deleteProduct({
                 id:prod.id

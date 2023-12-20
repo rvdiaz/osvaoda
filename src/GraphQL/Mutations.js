@@ -12,7 +12,7 @@ mutation addOrder(
         name: $name,
         address: $address,
         phone: $phone,
-        status: Processing,
+        status: Procesando,
         products: $arrayProducts
       }
     ){

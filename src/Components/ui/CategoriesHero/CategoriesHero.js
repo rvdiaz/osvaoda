@@ -19,8 +19,6 @@ export const CategoriesHero = () => {
     )
   }
 
-  console.log(categories);
-
   return (
     <Container
       disableGutters

@@ -24,7 +24,7 @@ export const ProductImg = (props) => {
         id: mainImage.data[0].id,
         alt: mainImage.data[0].attributes.alternativeText
       })
-    })
+    },[])
     
 
   return (
