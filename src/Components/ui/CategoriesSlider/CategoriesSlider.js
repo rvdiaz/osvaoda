@@ -1,7 +1,6 @@
 import { useQuery } from '@apollo/client';
 import { Box, Typography, useMediaQuery } from '@mui/material';
 import React from 'react';
-import { dataText, themePalette } from '../../../Core/core';
 import { LOAD_CATEGORIES_FOR_SLIDER } from '../../../GraphQL/Queries';
 import { HeroCategory } from './HeroCategory';
 import { SliderMenu } from './SliderMenu';
@@ -21,6 +20,7 @@ return (
   <Box>
   {sliders && sliders.map((slides,index)=>( 
     <Box
+      key={index}
       mt={index=== 0 ? '5vh':'5vh'}
       sx={{
         padding:'0 5%'
@@ -71,7 +71,7 @@ return (
         }}
         >
         <HeroCategory 
-          url={process.env.REACT_APP_API_USEQUERY + slides.attributes.image.data[0]?.attributes.url}
+          url={slides.attributes.image.data[0]?.attributes.url}
           styles={{
             'gridArea':!isMdDevice && !(index % 2) && '1 / 2'
           }} 

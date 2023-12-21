@@ -8,7 +8,7 @@ import { SelectInput } from './SelectInput';
 export const Search = () => {
   const isMdDevice = useMediaQuery('(max-width: 768px)');
   const navigate = useNavigate();
-  const [categoryActive, setcategoryActive] = useState('All Categories');
+  const [categoryActive, setcategoryActive] = useState('Categorias');
   const [searchInput, setsearchInput] = useState('');
 
   const handleSubmit=()=>{

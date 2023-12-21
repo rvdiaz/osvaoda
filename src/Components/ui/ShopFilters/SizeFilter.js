@@ -2,7 +2,7 @@ import { Box, FormControl, MenuItem, Select, Typography } from '@mui/material';
 import React, { useEffect, useMemo } from 'react'
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { themePalette } from '../../../Core/core';
+import { dataText } from '../../../Core/core';
 
 
 export const SizeFilter = () => {

@@ -39,10 +39,10 @@ const isMdDevice = useMediaQuery('(max-width: 768px)');
       onChange={handleChange}
     >
       <MenuItem 
-        value="All Categories"
+        value="Categorias"
         id=''
         >
-          All Categories
+          Categorias
       </MenuItem>
       {
         data?.categories && data.categories.data.map((cat)=>(

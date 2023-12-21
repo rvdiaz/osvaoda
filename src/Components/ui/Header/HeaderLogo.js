@@ -20,7 +20,7 @@ export const HeaderLogo = ({darkLogo}) => {
       <Link 
         to='/'>
         <Image 
-          src={process.env.REACT_APP_API_USEQUERY+darkLogo.image.data.attributes.url} 
+          src={darkLogo.image.data.attributes.url} 
           alt={darkLogo.image.data.attributes.alternativeText}
           sx={{
             maxWidth:'110px'

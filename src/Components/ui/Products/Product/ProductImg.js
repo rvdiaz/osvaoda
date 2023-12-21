@@ -24,7 +24,7 @@ export const ProductImg = (props) => {
         id: mainImage.data[0].id,
         alt: mainImage.data[0].attributes.alternativeText
       })
-    })
+    },[])
     
 
   return (
@@ -83,23 +83,23 @@ export const ProductImg = (props) => {
     <Box>
         {activeImage.url!=='' ?
           <Image
-            src={process.env.REACT_APP_API_USEQUERY +  activeImage.url}
+            src={activeImage.url}
             alt={activeImage?.alternativeText}
             sx={{
               height:isMdDevice ? '40vh' : '50vh',
               width: "100%",
-              maxWidth:isMdDevice ? '100%' : '40vw'
+              maxWidth:isMdDevice ? '100%' : '35vw'
             }}
           />
           :
           mainImage ?
           <Image
-            src={process.env.REACT_APP_API_USEQUERY + mainImage.data[0].attributes.url}
+            src={mainImage.data[0].attributes.url}
             alt={mainImage.data[0].attributes.alternativeText}
             sx={{
               height:isMdDevice ? '40vh' : '50vh',
               width: "100%",
-              maxWidth:isMdDevice ? '100%' : '40vw'
+              maxWidth:isMdDevice ? '100%' : '35vw'
             }}
           />
           :
@@ -108,7 +108,7 @@ export const ProductImg = (props) => {
             sx={{
               height:isMdDevice ? '40vh' : '50vh',
               width: "100%",
-              maxWidth:isMdDevice ? '100%' : '40vw'
+              maxWidth:isMdDevice ? '100%' : '35vw'
             }}
         />
         } 

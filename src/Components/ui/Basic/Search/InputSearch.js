@@ -17,8 +17,8 @@ export const InputSearch = (props) => {
   }
 
   const dataFetch={
-    query:categoryActive === 'All Categories' ? SEARCH_PRODUCTS : SEARCH_PRODUCTS_BY_CATEGORY,
-    variables:categoryActive === 'All Categories' ? { search:searchInput } : { search:searchInput,categoryId:categoryActive }
+    query:categoryActive === 'Categorias' ? SEARCH_PRODUCTS : SEARCH_PRODUCTS_BY_CATEGORY,
+    variables:categoryActive === 'Categorias' ? { search:searchInput } : { search:searchInput,categoryId:categoryActive }
   }
  
   const { data, refetch } = useQuery(dataFetch.query, {
@@ -32,7 +32,7 @@ export const InputSearch = (props) => {
   }, [searchInput]) 
 
   useEffect(() => {
-    if (categoryActive === 'All Categories'){
+    if (categoryActive === 'Categorias'){
       if(data?.products)
         setproducts(data?.products.data);
     }

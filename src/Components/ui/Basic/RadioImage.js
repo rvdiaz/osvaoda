@@ -75,7 +75,7 @@ export const RadioImage = (props) => {
           >{value.name}</Typography>
         :      
         <img 
-          src={process.env.REACT_APP_API_USEQUERY + img.url}
+          src={img.url}
           alt={img?.alternativeText}
       />
       }

@@ -24,10 +24,10 @@ export const Shop = () => {
     const fetchData=useCallback(async()=>{
       try {
         setloading(true);
-        const productContent=await axios(process.env.REACT_APP_API_USEQUERY + endPoint,
+        const productContent=await axios(process.env.REACT_APP_API_USEQUERY_ADMIN + endPoint,
           {
               headers: {
-                  Authorization:`Bearer ${process.env.REACT_APP_API_TOKEN}`
+                  Authorization:`Bearer ${process.env.REACT_APP_TOKEN_API_ADMIN}`
                 },
               }
           );

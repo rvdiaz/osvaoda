@@ -15,6 +15,9 @@ import { Footer } from './Footer/Footer'
 import { Header } from './Header/Header'
 import { Menu } from './Menu/Menu'
 
+const { io } = require('socket.io-client');
+// URL to your strapi instance
+
 export const Main = () => {
     const {pathname} = useLocation();
     const isMdDevice = useMediaQuery('(max-width: 768px)');

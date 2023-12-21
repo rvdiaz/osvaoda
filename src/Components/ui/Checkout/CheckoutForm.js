@@ -53,6 +53,7 @@ export const CheckoutForm = () => {
             }
           }
           )
+         
           saveOrder(
             {
               variables:{
@@ -177,7 +178,7 @@ export const CheckoutForm = () => {
         required={true}
         color='dark'
         name='address'
-        label={dataText.phoneFieldContactForm}
+        label={dataText.addressFieldContactForm}
         type='text'
         size={isMdDevice ? 'small' : 'medium'}
         value={inputForm['address'].value}

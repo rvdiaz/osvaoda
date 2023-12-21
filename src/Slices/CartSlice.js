@@ -41,7 +41,6 @@ const cartSlice=createSlice({
         deleteProduct(state,data){
             const auxArray=[...state.products];
             const newArray=auxArray.filter(prod=>prod.id!==data.payload.id);
-            console.log(newArray);
             state.products=newArray;
         },
         resetProducts(state){

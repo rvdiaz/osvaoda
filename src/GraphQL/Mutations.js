@@ -5,14 +5,14 @@ mutation addOrder(
     $name:String!,
     $address:String!,
     $phone:String!,
-    $arrayProducts:[ComponentLayoutProductOrderInput!],
+    $arrayProducts:[ComponentOsvaodaProductOrderInput!],
   ){
     createOrder(
       data: {
         name: $name,
         address: $address,
         phone: $phone,
-        status: Processing,
+        status: Procesando,
         products: $arrayProducts
       }
     ){
