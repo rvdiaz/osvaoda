@@ -50,7 +50,7 @@ export const CartItem = (props) => {
         >
         <Avatar 
             alt={prod.firstImage.alt} 
-            src={process.env.REACT_APP_API_USEQUERY + prod.firstImage.url} 
+            src={prod.firstImage.url} 
             variant="square"
             sx={{
             width: 100, 

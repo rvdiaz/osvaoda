@@ -22,7 +22,7 @@ export const Hero = () => {
 
   return (
     <BackgroundComponent 
-      src={process.env.REACT_APP_API_USEQUERY + image?.url}
+      src={image?.url}
       style={{
         'height':isMdDevice ? '80vh':'50vh',
         'backgroundSize':'cover',

@@ -35,7 +35,7 @@ export const CategoriesHero = () => {
           <CategoryCard
             key={category.id}
             id={category.id}
-            src={process.env.REACT_APP_API_USEQUERY + category.attributes.image.data[0].attributes.url}
+            src={category.attributes.image.data[0].attributes.url}
             title={category.attributes.title}
           />
           ))

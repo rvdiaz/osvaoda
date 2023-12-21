@@ -14,8 +14,8 @@ export const Search = () => {
     const [products, setproducts] = useState();
 
     const dataFetch={
-        query:category === 'All Categories' ? SEARCH_PRODUCTS : SEARCH_PRODUCTS_BY_CATEGORY,
-        variables:category === 'All Categories' ? { search:input } : { search:input,categoryId:category }
+        query:category === 'Categorias' ? SEARCH_PRODUCTS : SEARCH_PRODUCTS_BY_CATEGORY,
+        variables:category === 'Categorias' ? { search:input } : { search:input,categoryId:category }
       }
      
       const { data, error } = useQuery(dataFetch.query, {
@@ -23,7 +23,7 @@ export const Search = () => {
       });
 
       useEffect(() => {
-        if (category === 'All Categories'){
+        if (category === 'Categorias'){
           if(data?.products)
             setproducts(data?.products.data);
         }

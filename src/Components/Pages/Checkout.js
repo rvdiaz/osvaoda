@@ -29,7 +29,7 @@ export const Checkout = () => {
             <Link 
              to='/'>
                 <Image 
-                src={process.env.REACT_APP_API_USEQUERY + logo.image.data.attributes.url} 
+                src={logo.image.data.attributes.url} 
                 alt={logo.image.data.attributes.alternativeText}
                 sx={{
                     maxWidth:'100px'

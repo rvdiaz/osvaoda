@@ -8,7 +8,7 @@ export const sendOrder=async(inputForm)=>{
     const message=inputForm.message.value;
     let res;
     await axios.post(
-        process.env.REACT_APP_API_USEQUERY+'/api/leads',
+        process.env.REACT_APP_API_USEQUERY_ADMIN+'/api/leads',
         {
         "data":{
             "name": name,
@@ -19,7 +19,7 @@ export const sendOrder=async(inputForm)=>{
         },
         {
             headers: {
-                Authorization:`Bearer ${process.env.REACT_APP_API_TOKEN}`
+                Authorization:`Bearer ${process.env.REACT_APP_TOKEN_API_ADMIN}`
             }
         }
    )

@@ -17,20 +17,10 @@ import { Menu } from './Menu/Menu'
 
 const { io } = require('socket.io-client');
 // URL to your strapi instance
-const SERVER_URL = process.env.REACT_APP_API_USEQUERY;
 
 export const Main = () => {
     const {pathname} = useLocation();
     const isMdDevice = useMediaQuery('(max-width: 768px)');
-
-    const socket = io(SERVER_URL);
-
-    socket.on('connect', () => {
-        socket.on('order:create', (data) => {
-            console.log('order created!');
-            console.log(data);
-        });
-    });
 
     return (
     <Box>

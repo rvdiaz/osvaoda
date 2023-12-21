@@ -5,7 +5,7 @@ mutation addOrder(
     $name:String!,
     $address:String!,
     $phone:String!,
-    $arrayProducts:[ComponentLayoutProductOrderInput!],
+    $arrayProducts:[ComponentOsvaodaProductOrderInput!],
   ){
     createOrder(
       data: {

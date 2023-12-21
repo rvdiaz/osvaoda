@@ -71,7 +71,7 @@ return (
         }}
         >
         <HeroCategory 
-          url={process.env.REACT_APP_API_USEQUERY + slides.attributes.image.data[0]?.attributes.url}
+          url={slides.attributes.image.data[0]?.attributes.url}
           styles={{
             'gridArea':!isMdDevice && !(index % 2) && '1 / 2'
           }} 

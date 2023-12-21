@@ -47,7 +47,7 @@ export const ProductCard = (props) => {
         to={`/productos/${product.id}`}
       >
       <Image
-        src={process.env.REACT_APP_API_USEQUERY + product.url}
+        src={product.url}
         sx={{ 
           height: height ?? '200px',
           objectFit:'cover',
